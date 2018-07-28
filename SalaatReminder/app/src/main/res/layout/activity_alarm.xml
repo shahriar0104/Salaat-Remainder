@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:fillViewport="true"
+    android:background="#f4f4f4"
+    tools:context=".AlarmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+       android:id="@+id/card_view"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:card_view="http://schemas.android.com/apk/res-auto"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="10dp"
+       android:layout_margin="2dp"
+       android:layout_gravity="center_horizontal"
+       card_view:cardCornerRadius="4dp"
+       card_view:cardElevation="4dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="10dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <CheckBox
+                   android:id="@+id/fajrCheck"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/space"
+                   android:layout_weight="1"
+                   android:button="@null"
+                   android:background="#f7f8f9"
+                   android:paddingLeft="10dp"
+                   android:paddingRight="10dp"
+                   android:layout_marginRight="20dp"
+                   android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                   android:text="Fajr"/>
+
+
+               <CheckBox
+                   android:layout_marginLeft="20dp"
+                   android:id="@+id/zuhrCheck"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/space"
+                   android:button="@null"
+                   android:background="#f7f8f9"
+                   android:layout_weight="1"
+                   android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                   android:paddingLeft="10dp"
+                   android:paddingRight="10dp"
+                   android:text="zuhr"/>
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/asrCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:button="@null"
+                    android:layout_marginRight="2dp"
+                    android:background="#f7f8f9"
+                    android:layout_weight="1.5"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="asr"/>
+                <CheckBox
+                    android:id="@+id/maghribCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:button="@null"
+                    android:layout_marginLeft="40dp"
+                    android:background="#f7f8f9"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="maghrib"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ishaCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:button="@null"
+                    android:background="#f7f8f9"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="isha"/>
+              <!--  <CheckBox
+                    android:id="@+id/tahajjutCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space"
+                    android:button="@null"
+                    android:layout_marginLeft="0dp"
+                    android:background="#f7f8f9"
+                    android:layout_weight="1.15"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="tahajjut"/> -->
+
+            </LinearLayout>
+
+           <Button
+               android:id="@+id/start_alarm_button"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:background="@color/colorPrimary"
+               android:text="Set Alarm for Azan"
+               android:textColor="@android:color/white"
+               android:textSize="14sp" />
+
+       </LinearLayout>
+
+   </android.support.v7.widget.CardView>
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinnerCustom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TimePicker
+            android:layout_marginTop="10dp"
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/set_alarm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/start_alarm"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/repeater_alarm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Repeat Alarms"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/stop_alarm_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/stop_alarm"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>
